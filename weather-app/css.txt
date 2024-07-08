@@ -1,0 +1,45 @@
+ <style>
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+  
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .weather-details {
+      margin-top: 20px;
+      padding: 16px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    .weather-details h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #555;
+    }
+  
+    .weather-details p {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #777;
+    }
+  </style>
