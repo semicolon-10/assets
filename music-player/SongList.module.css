@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.songList {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.songList h1 {
+    font-size: 2.5em;
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff6f61;
+    padding-bottom: 10px;
+}
+
+.songList ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.songList li {
+    padding: 15px;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #333, #444);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.songList li:hover {
+    background: linear-gradient(135deg, #444, #555);
+    transform: scale(1.02);
+}
+
+.controls {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.controls h2 {
+    font-size: 1.8em;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(135deg, #ff6f61, #ff3d3d);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+    background: linear-gradient(135deg, #ff3d3d, #ff1a1a);
+    transform: scale(1.05);
+}
+
+.controls input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #444;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.controls input[type="range"]:hover {
+    opacity: 1;
+}
+
+.controls input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ff6f61;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.controls input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ff6f61;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
