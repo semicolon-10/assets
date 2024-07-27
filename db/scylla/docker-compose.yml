@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  scylla:
+    image: scylladb/scylla:latest
+    ports:
+      - "9042:9042"
+    environment:
+      - SCYLLA_CLUSTER_NAME=my-scylla-cluster
+      - SCYLLA_SEEDS=scylla
+    command: --smp 1 --memory 750M --overprovisioned 1
