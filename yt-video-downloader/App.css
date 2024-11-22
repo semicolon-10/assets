@@ -1,0 +1,67 @@
+.app {
+  background-color: #181818;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  color: #FF0000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.video-link-input {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.metadata {
+  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.metadata-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metadata-table td {
+  padding: 8px;
+  border: 1px solid #333;
+}
+
+.metadata-table tr:nth-child(even) {
+  background-color: #222;
+}
+
+.download-container {
+  display: flex;
+  justify-content: center;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #FF0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.download-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
