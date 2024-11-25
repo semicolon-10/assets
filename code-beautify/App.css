@@ -1,0 +1,101 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* App Container */
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.app-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Container for Input and Output */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #4caf50;
+}
+
+/* Textarea Styling */
+.textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
