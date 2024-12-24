@@ -1,0 +1,252 @@
+/* Modal Container */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Modal Box */
+.modal {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 16px;
+}
+
+.category-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.category-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid #ddd;
+    background-color: #f5f5f5;
+    width: 100%;
+    /* text-align: center; <-- not strictly needed with flexbox */
+}
+
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-button {
+    padding: 8px 16px;
+    /* Remove display: inline-block; */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #fff;
+    /* If needed, remove margin: 0 auto; or any other margins */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    border: 2px solid rgba(0, 74, 173, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 74, 173, 0.1);
+    font-family: sans-serif;
+    color: #333;
+}
+.question-block {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #F0F8FF; /* light "AliceBlue" background */
+    border-radius: 4px;
+    border-left: 4px solid var(--primary-color);
+}
+.question-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #003366;
+}
+.answer-option {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    color: #003366;
+}
+.answer-option input {
+    margin-right: 8px;
+}
+.no-questions-message {
+    text-align: center;
+    color: var(--primary-color);
+}
+.loading-message {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* A little spinner animation */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #e5e5e5; /* Light gray */
+    border-top: 5px solid #007BFF; /* Blue top segment */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1rem;
+}
+
+/* Text styling */
+.loading-text {
+    font-size: 1.2rem;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Keyframe for continuous rotation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* General container styling */
+.result-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9ff; /* Light blueish white */
+    border: 1px solid #d0d8ff; /* Light blue border */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Table head styling */
+.result-head {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+}
+
+.result-head-tr {
+    text-align: left;
+}
+
+.result-head-th {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #d0d8ff; /* Light blue border */
+}
+
+/* Table body styling */
+.result-body {
+    background-color: #ffffff; /* White background */
+}
+
+.result-body-tr:nth-child(even) {
+    background-color: #f0f8ff; /* Light blue for alternate rows */
+}
+
+.result-body-td {
+    padding: 10px;
+    border: 1px solid #d0d8ff; /* Light blue border */
+    text-align: left;
+}
+
+/* Highlight correct and incorrect answers */
+.result-body-td:last-child {
+    font-weight: bold;
+    text-align: center;
+}
+
+.result-body-td:last-child:contains("True") {
+    color: #28a745; /* Green for correct answers */
+}
+
+.result-body-td:last-child:contains("False") {
+    color: #dc3545; /* Red for incorrect answers */
+}
+
+/* Add hover effect for rows */
+.result-body-tr:hover {
+    background-color: #e6f7ff; /* Light blue hover effect */
+    cursor: pointer;
+}
