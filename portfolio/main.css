@@ -1,0 +1,207 @@
+:root {
+    --background-dark: #121212;
+    --card-dark: #1f1f1f;
+    --text-light: #ededed;
+    --text-muted: #b0b0b0;
+    --accent-color: #64ffda;
+}
+
+/* Global resets & body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    font-family: sans-serif;
+    color: var(--text-light);
+}
+
+.home-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* Reduced gap for compact layout */
+}
+
+/* Home heading styling */
+.home-heading {
+    font-size: 3rem;
+    margin: 0;
+    color: var(--accent-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home-subheading {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-top: -0.5rem;
+    margin-bottom: 1rem; /* Adjusted for consistency */
+    opacity: 0.9;
+}
+
+/* Section styling */
+.section {
+    background-color: var(--card-dark);
+    padding: 1rem; /* Consistent padding for all sections */
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent-color);
+}
+
+.section-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    white-space: pre-wrap; /* Preserve new lines */
+    color: var(--text-light);
+}
+
+/* Highlight text */
+.highlight {
+    color: var(--accent-color);
+}
+
+/* Summary, Experience, Achievement, and Contact sections */
+.summary-section,
+.experience-section,
+.achievement-section,
+.skills-section,
+.education-section,
+.contact-section {
+    border-left: 4px solid var(--accent-color);
+}
+
+/* Experience-specific */
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experience-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--background-dark);
+    font-size: 1.1rem;
+}
+
+/* Social links */
+.social-container {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: #50ddc2; /* Slightly different accent color on hover */
+}
+
+/* Skills section */
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--background-dark);
+}
+
+.skill-name {
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.skill-rating {
+    font-size: 1.1rem;
+    color: gold; /* Or var(--accent-color) */
+    letter-spacing: 1px;
+}
+
+.skill-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+}
+
+.experience-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Allows us to position a vertical line behind items */
+}
+
+/* A vertical line running through the timeline */
+.experience-list::before {
+    content: "";
+    position: absolute;
+    left: 12px; /* Adjust horizontally to match your design */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--accent-color);
+    opacity: 0.4; /* Slight translucence if desired */
+}
+
+/* Each individual item */
+.experience-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2.5rem; /* Space for the timeline's bullet and line */
+}
+
+/* A circle or bullet for each timeline entry */
+.experience-item::before {
+    content: "";
+    position: absolute;
+    left: 6px; /* Position near/over the timeline line from .experience-list::before */
+    width: 14px;
+    height: 14px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(0.3rem); /* Nudge the bullet down slightly */
+}
+
+/* Optional heading wrapper so role & company stack nicely */
+.experience-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Role and Company styles */
+.experience-role {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.experience-company {
+    font-size: 1rem;
+    color: var(--text-light);
+    opacity: 0.8;
+}
+
+/* Duration and description */
+.experience-duration {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.experience-description {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
